@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:b="http://bootsfaces.net/ui"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>Cadastro de Usúario</title>
+    </h:head>
+    <h:body style="padding: 60px">
+        <b:navBar brand="Cadastro de Usuário" brandHref="#" fixed="top">
+            <b:navbarLinks>
+                <b:navLink value="Home" href="#"></b:navLink>
+                <b:navLink value="Cadastro" href="#"></b:navLink>
+                <b:navLink value="Consulta" href="consulta.xhtml"></b:navLink>
+            </b:navbarLinks>
+            
+        </b:navBar>
+        <b:container>
+                <b:jumbotron>
+                    <h1>Cadastro de Usuário</h1>
+                    <p>Cadastre-se agora no sistema.</p>
+                    <h:form>
+                        <h:panelGrid columns="1">
+                            <h:outputLabel>Nome</h:outputLabel>
+                            <b:inputText id="nome" value="#{pessoaMB.pessoa.nome}" placeholder="Digite seu nome"></b:inputText> 
+
+                            <h:outputLabel>Sobrenome</h:outputLabel>
+                            <b:inputText id="sobrenome" value="#{pessoaMB.pessoa.sobrenome}" placeholder="Digite seu sobrenome"></b:inputText> 
+
+                            <h:outputLabel>E-mail</h:outputLabel>
+                            <b:inputText id="email" value="#{pessoaMB.pessoa.email}" placeholder="Digite seu email"></b:inputText> 
+                            
+                            <div>
+                                <b:commandButton id="btnCadastrar" type="submit" action="#{pessoaMB.cadastrarUser()}" value="Cadastrar"></b:commandButton>
+                                <b:commandButton id="btnLimpar" type="reset" value="Limpar" />
+                            </div>
+                          
+                        </h:panelGrid>
+                       
+                    </h:form>
+                </b:jumbotron>
+            
+        </b:container>
+    </h:body>
+</html>
+
